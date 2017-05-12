@@ -23,11 +23,12 @@ a:active { color: #204782; text-decoration: underline;}
 #container { width: 960px; margin: 0 auto;}
 
 /* Logo */
-div.logo {float: left;  margin: 15px 0 10px; background:url(../images/pages/logo-open-ore-bg.png) no-repeat 70px top;}
+div.logo {float: left; margin: 15px 0 10px; background:url(../images/pages/logo-open-ore-bg.png) no-repeat 70px top;}
 div.logo a {color: #acacac; display: block; position: relative; text-decoration: none; overflow: hidden;}
 div.logo-img img {border: 0 none; height: auto; max-width: 100%; vertical-align: middle;}
 div.logo-img{float: left;}
-div.logo-text {font-family: 'Roboto', Arial, sans-serif; font-size: 21px; color: #000; margin-top:40px; float: left}
+div.logo-text {font-family: 'Roboto', Arial, sans-serif; width: 300px; font-size: 22px; font-weight: bold; color: #000; margin-top:5px; float: left}
+div.moto-text {font-family: 'Roboto', Arial, sans-serif;  font-size: 12px; font-weight: bold; font-style: italic; margin-top:40px; color: #008B8B}
 .compare-main div.logo {margin-left: 20px;}
 
 /* Navigation */

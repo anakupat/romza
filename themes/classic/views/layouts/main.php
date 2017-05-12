@@ -51,7 +51,8 @@ $baseThemeUrl = Yii::app()->theme->baseUrl;
 			<a title="<?php echo Yii::t('common', 'Go to main page'); ?>" href="<?php echo Yii::app()->controller->createAbsoluteUrl('/'); ?>">
 				<div class="logo-img"> <img width="77" height="70" alt="" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/pages/logo-open-ore.png" /></div>
 				<div class="logo-text"><?php echo CHtml::encode(Yii::app()->name);?></div>
-			</a>
+				<div class="moto-text">your quality and affordable service providers</div>
+			</a>	
 		</div>
 
 		<?php

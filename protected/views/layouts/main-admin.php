@@ -120,11 +120,6 @@ if (isset($this->adminTitle) && $this->adminTitle) {
 					'type' => 'navbar',
 					'activateParents' => true,
 					'items' => array(
-						array('label' => Yii::t('module_install', 'PRO version demo', array(), 'messagesInFile', Yii::app()->language), 'url' => 'https://demo-pro.open-real-estate.info/', 'linkOptions'=>array('class'=>'advert-pro', 'target'=>'_blank'), 'visible' => isFree()),
-
-						array('label' => Yii::t('module_install', 'Add-ons', array(), 'messagesInFile', Yii::app()->language),
-							'url' => (Yii::app()->language == 'ru') ? 'https://open-real-estate.info/ru/open-real-estate-modules' : 'https://open-real-estate.info/en/open-real-estate-modules', 'linkOptions'=>array('class'=>'advert-add', 'target'=>'_blank'), 'visible' => isFree()),
-
 						array('label' => Yii::t('module_install', 'Other_author_scripts', array(), 'messagesInFile', Yii::app()->language),
 							'url' => (Yii::app()->language == 'ru') ? 'https://monoray.ru/products' : 'https://monoray.net/products', 'linkOptions'=>array('class'=>'advert-author-scripts', 'target'=>'_blank')),
 
@@ -244,13 +239,12 @@ if (isset($this->adminTitle) && $this->adminTitle) {
 						array(
 							array('label' => tc('Overview'), 'icon' => 'home', 'url' => $baseUrl . '/stats/backend/main/admin', 'active' => isActive('stats.admin'), 'visible' => Yii::app()->user->checkAccess('stats_admin')),
 							array('label' => tc('Statistics'), 'icon' => 'stats', 'url' => $baseUrl . '/stats/backend/main/graph', 'active' => isActive('stats.graph'), 'visible' => Yii::app()->user->checkAccess('stats_admin')),
-							array('label' => tc('News about Open Real Estate CMS'), 'bage' => $bageNewsProduct, 'icon' => 'inbox', 'url' => $baseUrl . '/entries/backend/main/product', 'active' => isActive('entries.product'), 'visible' => Yii::app()->user->checkAccess('entries_news_product_admin')),
 						)
 					),
-					array('label' => tc('Listings'),'icon' => 'th-large', 'notify'=>($bageListings || $bageComplain || $bageBooking), 'visible' => (Yii::app()->user->checkAccess('apartments_admin') || Yii::app()->user->checkAccess('comments_admin') || Yii::app()->user->checkAccess('apartmentsComplain_admin')), 'items'=>
+					array('label' => tc('Properties'),'icon' => 'th-large', 'notify'=>($bageListings || $bageComplain || $bageBooking), 'visible' => (Yii::app()->user->checkAccess('apartments_admin') || Yii::app()->user->checkAccess('comments_admin') || Yii::app()->user->checkAccess('apartmentsComplain_admin')), 'items'=>
 						array(
-							array('label' => tc('Listings'), 'icon' => 'list-alt', 'bage'=> $bageListings, 'url' => $baseUrl . '/apartments/backend/main/admin?resetFilters=1', 'active' => isActive('apartments'), 'visible' => Yii::app()->user->checkAccess('apartments_admin')),
-							array('label' => tc('List your property'), 'icon' => 'plus-sign', 'url' => $baseUrl . '/apartments/backend/main/create', 'active' => isActive('apartments.create'), 'visible' => Yii::app()->user->checkAccess('apartments_admin')),
+							array('label' => tc('All Properties'), 'icon' => 'list-alt', 'bage'=> $bageListings, 'url' => $baseUrl . '/apartments/backend/main/admin?resetFilters=1', 'active' => isActive('apartments'), 'visible' => Yii::app()->user->checkAccess('apartments_admin')),
+							array('label' => tc('New Property'), 'icon' => 'plus-sign', 'url' => $baseUrl . '/apartments/backend/main/create', 'active' => isActive('apartments.create'), 'visible' => Yii::app()->user->checkAccess('apartments_admin')),
 							array('label' => tc('Complains'), 'bage'=> $bageComplain, 'icon' => 'list-alt', 'url' => $baseUrl . '/apartmentsComplain/backend/main/admin', 'active' => isActive('apartmentsComplain'), 'visible' => issetModule('apartmentsComplain') && Yii::app()->user->checkAccess('apartmentsComplain_admin')),
 							array('label' => tt('Booking apartment', 'booking'), 'bage'=> $bageBooking, 'icon' => 'bookmark', 'url' => $baseUrl . '/bookingtable/backend/main/admin', 'active' => isActive('bookingtable'), 'visible' => issetModule('bookingtable') && Yii::app()->user->checkAccess('bookingtable_admin')),
 
@@ -366,16 +360,12 @@ if (isset($this->adminTitle) && $this->adminTitle) {
 		<!-- /.content-wrapper -->
 
 		<footer class="main-footer">
-			<?php echo getGA(); ?>
-			<?php echo getJivo(); ?>
-			<p>&copy;&nbsp;<?php echo ORE_VERSION_NAME . ' ' . ORE_VERSION . ', ' . date('Y'); ?></p>
-
 			<div id="footer">
 				<div id="footer-links">&nbsp;</div>
 				<div id="footer-two-links">
 					<div class="wrapper">
 						<div class="copyright">
-							<a href="https://open-real-estate.info" target="_blank">Powered by Open Real Estate CMS</a>
+							<p>&copy;&nbsp;<?php echo 'ROMZA Consults Ldt,  ', date('Y'); ?></p>
 						</div>
 					</div>	
 				</div>

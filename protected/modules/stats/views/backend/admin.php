@@ -79,30 +79,3 @@ $this->adminTitle = tc('Overview');
 	<?php endif;?>
 </div>
 
-<?php if (!empty($newsProductItems)): ?>
-	<h3><?php echo tc('News product');?></h3>
-	<div style="direction: ltr;">
-		<?php foreach ($newsProductItems as $item): ?>		
-			<div class="box box-default">
-				<div class="box-header with-border">
-					<h3 class="box-title"><?php echo $item->title;?></h3>
-					<div class="box-tools pull-right">
-						<button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="<?php echo tc('Collapse');?>"><i class="fa fa-minus"></i></button>
-						<!--<button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>-->
-					</div><!-- /.box-tools -->
-				</div><!-- /.box-header -->
-				<div class="box-body">
-					<div>
-						<?php echo $item->pubDate;?>
-					</div>
-					<div>
-						<?php echo $item->description;?>
-					</div>
-					<div>
-						<?php echo CHtml::link(tt('Read more &raquo;', 'entries'), $item->link);?>
-					</div>
-				</div><!-- /.box-body -->
-			</div><!-- /.box -->
-		<?php endforeach; ?>
-	</div>
-<?php endif; ?>

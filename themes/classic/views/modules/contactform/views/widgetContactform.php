@@ -42,7 +42,7 @@
 ));
 ?>
 	<p>
-		<?php echo tt('You can fill out the form below to contact us.', 'contactform'); ?>
+		<?php echo tt('Fill the form below to contact us.', 'contactform'); ?>
 	</p>
 
 	<p class="note"><?php echo Yii::t('common', 'Fields with <span class="required">*</span> are required.'); ?></p>
@@ -107,4 +107,8 @@
 
 <?php $this->endWidget(); ?>
 
+<div>
+	Physical Addresses
 </div>
+</div>
+
