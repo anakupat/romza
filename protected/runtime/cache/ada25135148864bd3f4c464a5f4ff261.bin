@@ -1,4 +1,4 @@
-a:2:{i:0;s:37714:"1494527466|function getOffset(elem) {
+a:2:{i:0;s:37714:"1494947975|function getOffset(elem) {
 	if (elem.getBoundingClientRect) {
 		// "правильный" вариант
 		return getOffsetRect(elem)

@@ -288,15 +288,15 @@ if (isset($this->adminTitle) && $this->adminTitle) {
 						)
 					),
 
-					array('label' => tc('References'), 'icon' => 'asterisk', 'notify'=>$bageCities, 'visible' => Yii::app()->user->checkAccess('all_reference_admin'), 'items'=>
+					array('label' => tc('Property Feature'), 'icon' => 'asterisk', 'notify'=>$bageCities, 'visible' => Yii::app()->user->checkAccess('all_reference_admin'), 'items'=>
 						array(
-							array('label' => tc('Categories of references'), 'icon' => 'asterisk', 'url' => $baseUrl . '/referencecategories/backend/main/admin', 'active' => isActive('referencecategories'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
-							array('label' => tc('Values of references'), 'icon' => 'asterisk', 'url' => $baseUrl . '/referencevalues/backend/main/admin', 'active' => isActive('referencevalues'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
-							array('label' => tc('Reference "View:"'), 'icon' => 'asterisk', 'url' => $baseUrl . '/windowto/backend/main/admin', 'active' => isActive('windowto'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
-							array('label' => tc('Reference "Check-in"'), 'icon' => 'asterisk', 'url' => $baseUrl . '/timesin/backend/main/admin', 'active' => isActive('timesin'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
-							array('label' => tc('Reference "Check-out"'), 'icon' => 'asterisk', 'url' => $baseUrl . '/timesout/backend/main/admin', 'active' => isActive('timesout'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
-							array('label' => tc('Reference "Property types"'), 'icon' => 'asterisk', 'url' => $baseUrl . '/apartmentObjType/backend/main/admin', 'active' => isActive('apartmentObjType'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
-							array('label' => tc('Reference "City/Cities"'), 'icon' => 'asterisk', 'url' => $baseUrl . '/apartmentCity/backend/main/admin', 'active' => isActive('apartmentCity'), 'visible' => (!issetModule('location') && Yii::app()->user->checkAccess('all_reference_admin'))),
+							array('label' => tc('Category'), 'icon' => 'asterisk', 'url' => $baseUrl . '/referencecategories/backend/main/admin', 'active' => isActive('referencecategories'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
+							array('label' => tc('Features'), 'icon' => 'asterisk', 'url' => $baseUrl . '/referencevalues/backend/main/admin', 'active' => isActive('referencevalues'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
+							array('label' => tc('View'), 'icon' => 'asterisk', 'url' => $baseUrl . '/windowto/backend/main/admin', 'active' => isActive('windowto'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
+							array('label' => tc('Check-in'), 'icon' => 'asterisk', 'url' => $baseUrl . '/timesin/backend/main/admin', 'active' => isActive('timesin'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
+							array('label' => tc('Check-out'), 'icon' => 'asterisk', 'url' => $baseUrl . '/timesout/backend/main/admin', 'active' => isActive('timesout'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
+							array('label' => tc('Property Type'), 'icon' => 'asterisk', 'url' => $baseUrl . '/apartmentObjType/backend/main/admin', 'active' => isActive('apartmentObjType'), 'visible' => Yii::app()->user->checkAccess('all_reference_admin')),
+							array('label' => tc('City/Town'), 'icon' => 'asterisk', 'url' => $baseUrl . '/apartmentCity/backend/main/admin', 'active' => isActive('apartmentCity'), 'visible' => (!issetModule('location') && Yii::app()->user->checkAccess('all_reference_admin'))),
 							array('label' => tc('Awaiting moderation'), 'bage'=> $bageCities, 'icon' => 'time', 'url' => $baseUrl . '/apartmentCity/backend/main/admin?ApartmentCity[active]='.ApartmentCity::STATUS_MODERATION, 'visible' => (!issetModule('location') && Yii::app()->user->checkAccess('all_reference_admin') && $bageCities), 'linkOptions' => array('class' => 'lcatsub')),
 							array('label' => tc('Reference "Subway stations"'), 'icon' => 'asterisk', 'url' => $baseUrl . '/metroStations/backend/main/admin', 'active' => isActive('metroStations'), 'visible' => (!issetModule('location') && issetModule('metroStations') && Yii::app()->user->checkAccess('metro_stations_admin'))),
 						)

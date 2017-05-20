@@ -12,3 +12,6 @@ $this->adminTitle = tt('Create reference value');
 ?>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+
+
+
